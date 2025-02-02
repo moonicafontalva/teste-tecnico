@@ -1,4 +1,4 @@
-import { FooterEstilizado } from "./Footer.styled";
+import { FooterEstilizado } from './Footer.styled';
 
 const Footer = () => (
   <FooterEstilizado>

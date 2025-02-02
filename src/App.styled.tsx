@@ -7,7 +7,7 @@ export const DivEstilizada = styled.div`
   min-height: 100vh;
   background-color: #f3f4f6;
   position: relative;
-`
+`;
 
 export const FundoEstilizado = styled.div`
   position: absolute;
@@ -18,5 +18,5 @@ export const FundoEstilizado = styled.div`
   background-size: cover;
   background-position: center;
   opacity: 0.2;
-  background-image: url(${require("./assets/jornal.jpeg")});
-`
+  background-image: url(${require('./assets/jornal.jpeg')});
+`;

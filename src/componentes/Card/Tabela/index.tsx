@@ -1,1 +1,1 @@
-export { default } from "./Tabela"
+export { default } from './Tabela';

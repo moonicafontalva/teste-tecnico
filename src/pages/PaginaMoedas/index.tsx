@@ -1,1 +1,1 @@
-export { default } from "./PaginaMoedas";
+export { default } from './PaginaMoedas';

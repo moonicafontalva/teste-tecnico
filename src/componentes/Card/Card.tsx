@@ -1,22 +1,22 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import { SectionEstilizada } from "./Card.styles"
-import { ReactNode } from "react";
+import Header from './Header';
+import Footer from './Footer';
+import { SectionEstilizada } from './Card.styled';
+import { ReactNode } from 'react';
 
 interface CardProps {
-    children: ReactNode; // Tipando children como ReactNode
-  }
+  children: ReactNode; // tipando children como ReactNode, para aceitar qualquer tipo de conteúdo renderizado no jsx (string, number, jsx, []...)
+}
 
 const Card = ({ children }: CardProps) => {
-    return(
-        <SectionEstilizada>
-            <Header />
+  return (
+    <SectionEstilizada>
+      <Header />
 
-            {children}
+      {children}
 
-            <Footer />
-        </SectionEstilizada>
-    )
-}
+      <Footer />
+    </SectionEstilizada>
+  );
+};
 
 export default Card;
