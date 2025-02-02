@@ -1,18 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
-interface Moeda {
-  id: string;
-  moeda: string;
-  valor: number;
-}
-
-interface Dados {
-  timestamp: number;
-  base: string;
-  date: string;
-  rates: { [key: string]: number };
-}
+import { Moeda, Dados } from '../types/types'
+import api from '../services/apiServiceMoedas';
 
 const useFetchMoedas = () => {
   const [moedas, setMoedas] = useState<Moeda[]>([]);
@@ -21,12 +10,8 @@ const useFetchMoedas = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    axios
-      .get(
-        'https://data.fixer.io/api/latest?access_key=e2b765780c6c5ea4e73cd30d83806ff3',
-      )
-      // esta seria a forma correta de fazer a requisição, retornando o valor das moedas convertidos
-      //axios.get('https://data.fixer.io/api/convert?access_key=e2b765780c6c5ea4e73cd30d83806ff3&from=EUR&to=BRL&amount=100')
+    api
+      .get('')
       .then((response) => {
         console.log(response);
 
